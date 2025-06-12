@@ -1,0 +1,430 @@
+# Zoning Visuel - Site E-commerce Pokémon
+
+## PAGE D'ACCUEIL
+```
++--------------------------------------------------+
+|  LOGO   [Barre de recherche]   COMPTE  PANIER    | <- En-tête
++--------------------------------------------------+
+| [MENU PRINCIPAL - CATÉGORIES]                    |
++--------------------------------------------------+
+|                                                  |
+|           [BANNIÈRE SLIDER PRINCIPALE]           | <- Zone promotionnelle
+|      Dernières sorties / Événements / Promos     |
+|                                                  |
++--------------------------------------------------+
+|                                                  |
+| ACCÈS RAPIDE CATÉGORIES                          |
+|                                                  |
+| +--------+  +--------+  +--------+  +--------+   |
+| | Cartes |  |Boosters|  |Coffrets|  |Produits|   | <- Navigation catégories
+| | Unité  |  |Displays|  |   ETB  |  |Dérivés |   |
+| +--------+  +--------+  +--------+  +--------+   |
+|                                                  |
++--------------------------------------------------+
+|                                                  |
+| NOUVEAUTÉS & TENDANCES                           |
+|                                                  |
+| +--------+  +--------+  +--------+  +--------+   |
+| |        |  |        |  |        |  |        |   |
+| | Produit|  | Produit|  | Produit|  | Produit|   | <- Nouveautés
+| |  Prix  |  |  Prix  |  |  Prix  |  |  Prix  |   |
+| |[Panier]|  |[Panier]|  |[Panier]|  |[Panier]|   |
+| +--------+  +--------+  +--------+  +--------+   |
+|                                                  |
++--------------------------------------------------+
+|                                                  |
+| RECOMMANDATIONS PERSONNALISÉES                   |
+|                                                  |
+| +--------+  +--------+  +--------+  +--------+   |
+| |        |  |        |  |        |  |        |   |
+| | Produit|  | Produit|  | Produit|  | Produit|   | <- Recommandations
+| |  Prix  |  |  Prix  |  |  Prix  |  |  Prix  |   |
+| |[Panier]|  |[Panier]|  |[Panier]|  |[Panier]|   |
+| +--------+  +--------+  +--------+  +--------+   |
+|                                                  |
++--------------------------------------------------+
+|                                                  |
+| ACTUALITÉS & COMMUNAUTÉ                          |
+|                                                  |
+| +-------------------+  +-------------------+     |
+| | Article blog      |  | Calendrier        |     | <- Zone communautaire
+| | avec image        |  | tournois/sorties  |     |
+| +-------------------+  +-------------------+     |
+|                                                  |
++--------------------------------------------------+
+|                                                  |
+| PIED DE PAGE                                     |
+| Contact | Paiements | Livraison | Légal          | <- Footer
+| Newsletter | Réseaux sociaux                     |
+|                                                  |
++--------------------------------------------------+
+```
+
+## PAGE CATALOGUE (CARTES À L'UNITÉ)
+```
++--------------------------------------------------+
+|  LOGO   [Barre de recherche]   COMPTE  PANIER    | <- En-tête
++--------------------------------------------------+
+| [MENU PRINCIPAL - CATÉGORIES]                    |
++--------------------------------------------------+
+| CARTES POKÉMON > DERNIÈRE EXTENSION              | <- Fil d'Ariane
++--------------------------------------------------+
+|                             |                    |
+| FILTRES                     | TRI: [Pertinence ▼]|
+|                             | VUE: [Grille][Liste]
+| Extension [▼]               |                    |
+| Type Pokémon [▼]            | Résultats: 187     |
+| Rareté [▼]                  |                    |
+| Énergie [▼]                 | +-------+ +-------+|
+| Artiste [▼]                 | |       | |       ||
+|                             | | Carte | | Carte ||
+| Prix                        | |       | |       ||
+| [Curseur Min/Max]           | | 12,50€| | 24,99€||
+|                             | |[Panier]|[Panier]||
+| Disponibilité               | +-------+ +-------+|
+| ☑ En stock                  |                    |
+| ☐ Précommande               | +-------+ +-------+|
+|                             | |       | |       ||
+| État                        | | Carte | | Carte || <- Zone résultats
+| ☑ Neuf                      | |       | |       ||
+| ☐ Occasion                  | | 8,99€ | | 39,99€||
+| ☐ Gradé                     | |[Panier]|[Panier]||
+|                             | +-------+ +-------+|
+| Langue                      |                    |
+| ☑ Français                  | +-------+ +-------+|
+| ☐ Anglais                   | |       | |       ||
+| ☐ Japonais                  | | Carte | | Carte ||
+| ☐ Autres                    | |       | |       ||
+|                             | | 5,50€ | | 89,99€||
+| [RÉINITIALISER]             | |[Panier]|[Panier]||
+|                             | +-------+ +-------+|
+|                             |                    |
++-----------------------------+--------------------+
+|           [1] [2] [3] ... [12] [>]               | <- Pagination
++--------------------------------------------------+
+```
+
+## PAGE FICHE PRODUIT (CARTE POKÉMON)
+```
++--------------------------------------------------+
+|  LOGO   [Barre de recherche]   COMPTE  PANIER    | <- En-tête
++--------------------------------------------------+
+| [MENU PRINCIPAL - CATÉGORIES]                    |
++--------------------------------------------------+
+| CARTES > DERNIÈRE EXTENSION > CARTE PIKACHU VMAX | <- Fil d'Ariane
++--------------------------------------------------+
+|                             |                    |
+| +-------------------------+ | Pikachu VMAX       |
+| |                         | | Épée et Bouclier   |
+| |                         | | Carte #188/202     |
+| |    IMAGE PRINCIPALE     | | ★★★★☆ (12 avis)    |
+| |     HAUTE QUALITÉ       | |                    |
+| |       ZOOMABLE          | | Prix: 89,99 €      |
+| |                         | | Disponibilité:     |
+| +-------------------------+ | ✓ En stock (8 ex.) |
+|                             |                    |
+| +----+ +----+ +----+ +----+ | État:              |
+| |MINI| |MINI| |MINI| |VOIR| | [Mint] [Near-Mint] | <- Fiche produit
+| |    | |    | |    | |360°| | Prix selon état    |
+| +----+ +----+ +----+ +----+ |                    |
+|                             | Quantité: [1 ▼]    |
+|                             |                    |
+|                             | [AJOUTER AU PANIER]|
+|                             | [ACHETER MAINTENANT]
+|                             | [♥ FAVORIS]        |
+|                             |                    |
++-----------------------------+--------------------+
+|                                                  |
+| INFORMATIONS DÉTAILLÉES                          |
+|                                                  |
+| [Détails] [Spécifications] [Graphique prix]      | <- Onglets
+|                                                  |
+| Extension: Épée et Bouclier                      |
+| Numéro: 188/202                                  |
+| Rareté: Ultra Rare                               |
+| Type: Électrique                                 |
+| Artiste: Yuka Morii                              |
+| Langue: Français                                 |
+| Date de sortie: 07/02/2020                       |
+|                                                  |
++--------------------------------------------------+
+|                                                  |
+| CARTES ASSOCIÉES                                 |
+|                                                  |
+| +--------+  +--------+  +--------+  +--------+   |
+| |        |  |        |  |        |  |        |   | <- Recommandations
+| | Carte  |  | Carte  |  | Carte  |  | Carte  |   |
+| |  Prix  |  |  Prix  |  |  Prix  |  |  Prix  |   |
+| +--------+  +--------+  +--------+  +--------+   |
+|                                                  |
++--------------------------------------------------+
+```
+
+## PAGE SYSTÈME DE COLLECTION
+```
++--------------------------------------------------+
+|  LOGO   [Barre de recherche]   COMPTE  PANIER    | <- En-tête
++--------------------------------------------------+
+| [MENU PRINCIPAL - CATÉGORIES]                    |
++--------------------------------------------------+
+| MON COMPTE > MA COLLECTION                       | <- Fil d'Ariane
++--------------------------------------------------+
+|                                                  |
+| TABLEAU DE BORD COLLECTION                       |
+|                                                  |
+| +-------------------+  +-------------------+     |
+| | Total cartes:     |  | Valeur estimée:   |     |
+| | 758               |  | 3.587,50 €        |     |
+| +-------------------+  +-------------------+     |
+|                                                  |
+| +-------------------+  +-------------------+     | <- Statistiques
+| | Extensions        |  | Rarités           |     |
+| | complètes: 3      |  | Commune: 45%      |     |
+| +-------------------+  | Peu commune: 23%  |     |
+|                        | Rare: 17%         |     |
+| +-------------------+  | Ultra rare: 11%   |     |
+| | État:             |  | Secrète: 4%       |     |
+| | Mint: 82%         |  +-------------------+     |
+| | Near-mint: 15%    |                            |
+| | Played: 3%        |                            |
+| +-------------------+                            |
+|                                                  |
++--------------------------------------------------+
+|                                                  |
+| MES EXTENSIONS                                   |
+|                                                  |
+| [Extension 1] [Extension 2] [Extension 3] [+]    | <- Sélection extension
+|                                                  |
++--------------------------------------------------+
+|                                                  |
+| ÉPÉE ET BOUCLIER - SÉRIE DE BASE                 |
+| Completion: 187/202 (93%)                        |
+|                                                  |
+| +----+ +----+ +----+ +----+ +----+ +----+ +----+ |
+| |    | |    | |    | |    | |    | |    | |    | |
+| |Card| |Card| |Card| |Miss| |Card| |Card| |Miss| | <- Visualisation
+| |    | |    | |    | |ing | |    | |    | |ing | |    collection
+| +----+ +----+ +----+ +----+ +----+ +----+ +----+ |
+|                                                  |
+| +----+ +----+ +----+ +----+ +----+ +----+ +----+ |
+| |    | |    | |    | |    | |    | |    | |    | |
+| |Card| |Card| |Miss| |Card| |Card| |Miss| |Card| |
+| |    | |    | |ing | |    | |    | |ing | |    | |
+| +----+ +----+ +----+ +----+ +----+ +----+ +----+ |
+|                                                  |
++--------------------------------------------------+
+```
+
+## PAGE PANIER
+```
++--------------------------------------------------+
+|  LOGO   [Barre de recherche]   COMPTE  PANIER    | <- En-tête
++--------------------------------------------------+
+| [MENU PRINCIPAL - CATÉGORIES]                    |
++--------------------------------------------------+
+| PANIER D'ACHAT                                   | <- Titre de page
++--------------------------------------------------+
+|                             |                    |
+| ARTICLES (3)                | RÉSUMÉ COMMANDE    |
+|                             |                    |
+| +-------------------------+ | Sous-total: 127,48€|
+| | [IMG] Pikachu VMAX      | | Livraison:   4,95€|
+| | État: Mint              | | TVA:        26,49€|
+| | 89,99 € | Qté: [1 ▼] [X]| |                   |
+| +-------------------------+ | TOTAL:     132,43€|
+|                             |                   |
+| +-------------------------+ | [Code promo?]     | <- Panier
+| | [IMG] Booster Display   | |                   |
+| | Épée et Bouclier        | | OPTIONS LIVRAISON |
+| | 32,50 € | Qté: [1 ▼] [X]| | ○ Standard (3-5j) |
+| +-------------------------+ | ○ Express (24-48h) |
+|                             |                   |
+| +-------------------------+ | PROTECTION ENVOI  |
+| | [IMG] Protection cartes | | ☑ Top loader +1,99€|
+| | Ultra Pro (25)          | | ☐ Assurance  +3,99€|
+| | 4,99 €  | Qté: [1 ▼] [X]| |                   |
+| +-------------------------+ | [PASSER COMMANDE] |
+|                             |                   |
++-----------------------------+-------------------+
+|                                                 |
+| VOUS POURRIEZ AUSSI AIMER                       |
+|                                                 |
+| +-------+  +-------+  +-------+  +-------+     |
+| |       |  |       |  |       |  |       |     | <- Suggestions
+| |Product|  |Product|  |Product|  |Product|     |
+| |       |  |       |  |       |  |       |     |
+| +-------+  +-------+  +-------+  +-------+     |
+|                                                 |
++--------------------------------------------------+
+```
+
+## PAGE TUNNEL DE COMMANDE (PAIEMENT)
+```
++--------------------------------------------------+
+|  LOGO                          ÉTAPES SÉCURISÉES | <- En-tête simplifié
++--------------------------------------------------+
+|                                                  |
+| PAIEMENT                                         |
+|                                                  |
+| [○ Livraison] → [○ Adresse] → [● Paiement] → [○ Confirmation]
+|                                                  |
++--------------------------------------------------+
+|                             |                    |
+| CHOISIR MOYEN DE PAIEMENT   | RÉSUMÉ COMMANDE    |
+|                             |                    |
+| ○ Carte bancaire            | Pikachu VMAX   89,99€
+| +-------------------------+ | Booster Disp.  32,50€
+| | Numéro de carte         | | Protection     4,99€ |
+| +-------------------------+ |                      |
+| | Date expiration | CVV   | | Sous-total:  127,48€ |
+| +----------------+--------+ | Livraison:     4,95€ | <- Paiement
+|                             | Protection:    1,99€ |
+| ○ PayPal                    | TVA:          26,89€ |
+| [Se connecter à PayPal]     |                      |
+|                             | TOTAL:       134,42€ |
+| ○ Google Pay                |                      |
+| ○ Apple Pay                 |                      |
+| ○ Paiement en 3x sans frais |                      |
+|                             | [RETOUR]  [CONFIRMER]|
+|                             |                      |
++-----------------------------+----------------------+
+|                                                    |
+| PAIEMENT SÉCURISÉ                                  |
+| [Icônes bancaires] [Icônes sécurité] [Certifications]
+|                                                    |
++----------------------------------------------------+
+```
+
+## PAGE ESPACE CLIENT
+```
++--------------------------------------------------+
+|  LOGO   [Barre de recherche]   COMPTE  PANIER    | <- En-tête
++--------------------------------------------------+
+| [MENU PRINCIPAL - CATÉGORIES]                    |
++--------------------------------------------------+
+| MON COMPTE                                       | <- Titre de page
++--------------------------------------------------+
+|                             |                    |
+| NAVIGATION COMPTE           | TABLEAU DE BORD    |
+|                             |                    |
+| ● Tableau de bord           | Bonjour [Prénom],  |
+| ○ Mes commandes             |                    |
+| ○ Ma collection             | RÉSUMÉ ACTIVITÉ    |
+| ○ Mes favoris               |                    |
+| ○ Mes alertes prix          | Commandes actives: 1|
+| ○ Programme fidélité        | Points fidélité: 240|
+| ○ Paramètres du compte      | Alertes de prix: 3 |
+|                             |                    | <- Espace client
+|                             | DERNIÈRE COMMANDE  |
+|                             | #12345 - En cours  |
+|                             | [Détails] [Suivi]  |
+|                             |                    |
+|                             | COLLECTION         |
+|                             | 758 cartes - 93% EBT|
+|                             | [Gérer collection] |
+|                             |                    |
+|                             | ALERTES PRIX       |
+|                             | 3 cartes en baisse!|
+|                             | [Voir alertes]     |
+|                             |                    |
++-----------------------------+--------------------+
+|                                                  |
+| RECOMMANDÉ POUR VOUS                             |
+|                                                  |
+| +--------+  +--------+  +--------+  +--------+   |
+| |        |  |        |  |        |  |        |   | <- Recommandations
+| | Produit|  | Produit|  | Produit|  | Produit|   |    personnalisées
+| |  Prix  |  |  Prix  |  |  Prix  |  |  Prix  |   |
+| +--------+  +--------+  +--------+  +--------+   |
+|                                                  |
++--------------------------------------------------+
+```
+
+## PAGE BLOG/ACTUALITÉS
+```
++--------------------------------------------------+
+|  LOGO   [Barre de recherche]   COMPTE  PANIER    | <- En-tête
++--------------------------------------------------+
+| [MENU PRINCIPAL - CATÉGORIES]                    |
++--------------------------------------------------+
+| BLOG & ACTUALITÉS                                | <- Titre de page
++--------------------------------------------------+
+|                             |                    |
+| CATÉGORIES                  | ARTICLES RÉCENTS   |
+|                             |                    |
+| ○ Toutes les actualités     | +------------------+
+| ○ Nouvelles extensions      | | [IMAGE PRINCIPALE]
+| ○ Guides & Astuces          | | Titre article    |
+| ○ Tournois & Événements     | | Date | Auteur    |
+| ○ Analyses de cartes        | |                  |
+| ○ Tendances du marché       | | Extrait du texte |
+|                             | | de l'article avec|
+| ARCHIVES                    | | présentation... |
+|                             | |                  | <- Blog
+| ○ 2025                      | | [LIRE LA SUITE]  |
+| ○ 2024                      | +------------------+
+| ○ 2023                      |                    |
+|                             | +------------------+
+| ARTICLES POPULAIRES         | | [IMAGE]          |
+|                             | | Titre article    |
+| ● Top 10 cartes investissement| Date | Auteur    |
+| ● Guide du grading PSA      | |                  |
+| ● Comment débuter collection| | Extrait du texte |
+|                             | | [LIRE LA SUITE]  |
+|                             | +------------------+
+|                             |                    |
++-----------------------------+--------------------+
+|                                                  |
+| INSCRIVEZ-VOUS À NOTRE NEWSLETTER                |
+| [Email] [S'INSCRIRE]                             |
+|                                                  |
++--------------------------------------------------+
+```
+
+## PAGE SERVICE DE GRADING
+```
++--------------------------------------------------+
+|  LOGO   [Barre de recherche]   COMPTE  PANIER    | <- En-tête
++--------------------------------------------------+
+| [MENU PRINCIPAL - CATÉGORIES]                    |
++--------------------------------------------------+
+| SERVICES > GRADING DE CARTES                     | <- Fil d'Ariane
++--------------------------------------------------+
+|                                                  |
+| SERVICE DE GRADING PROFESSIONNEL                 |
+|                                                  |
+| +------------------+  +------------------+       |
+| |    [IMAGE]       |  | POURQUOI GRADER? |       |
+| |  Carte gradée    |  | • Authenticité   |       |
+| |    exemple       |  | • Protection     |       | <- Présentation
+| |                  |  | • Valorisation   |       |
+| +------------------+  +------------------+       |
+|                                                  |
+| NOTRE PROCESSUS DE GRADING                       |
+|                                                  |
+| +-----+     +-----+     +-----+     +-----+      |
+| |     |---->|     |---->|     |---->|     |      |
+| |Envoi|     |Éval.|     |Grade|     |Retour|     | <- Processus
+| |     |<----|     |<----|     |<----|     |      |
+| +-----+     +-----+     +-----+     +-----+      |
+|                                                  |
++--------------------------------------------------+
+|                                                  |
+| TARIFS ET SERVICES                               |
+|                                                  |
+| +------------------+  +------------------+       |
+| | SERVICE STANDARD |  | SERVICE PREMIUM  |       |
+| | • Délai: 30 jours|  | • Délai: 10 jours|       | <- Options
+| | • Prix: 15€/carte|  | • Prix: 30€/carte|       |
+| | • Photos: 4      |  | • Photos: 8 HD   |       |
+| | [CHOISIR]        |  | [CHOISIR]        |       |
+| +------------------+  +------------------+       |
+|                                                  |
++--------------------------------------------------+
+|                                                  |
+| COMMENCER UNE DEMANDE DE GRADING                 |
+|                                                  |
+| [SOUMETTRE MES CARTES]                           | <- Appel à l'action
+|                                                  |
++--------------------------------------------------+
+```

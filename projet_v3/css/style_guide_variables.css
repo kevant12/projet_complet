@@ -1,0 +1,387 @@
+/* destocard-simple.css */
+
+/* =========== VARIABLES DE BASE =========== */
+:root {
+  /* Couleurs principales */
+  --rouge: #f93600;
+  --rouge-fonce: #c52d00;
+  --violet: #5940ce;
+  --violet-fonce: #3c1d63;
+  
+  /* Couleurs neutres */
+  --blanc: #ffffff;
+  --noir: #121212;
+  --gris-clair: #e0e0e0;
+  --gris-moyen: #a0a0a0;
+  --gris-fonce: #333333;
+  
+  /* Couleurs fonctionnelles */
+  --texte: var(--gris-clair);
+  --fond: var(--noir);
+  --accent: var(--rouge);
+  --lien: #00b4ff;
+  
+  /* Bordures */
+  --bordure-fine: 1px solid var(--gris-fonce);
+  --bordure-epaisse: 3px solid var(--rouge);
+  
+  /* Espaces */
+  --espace-xs: 0.25rem;
+  --espace-s: 0.5rem;
+  --espace-m: 1rem;
+  --espace-l: 1.5rem;
+  --espace-xl: 2rem;
+  
+  /* Tailles de police */
+  --texte-xs: 0.75rem;
+  --texte-s: 0.875rem;
+  --texte-m: 1rem;
+  --texte-l: 1.25rem;
+  --texte-xl: 1.5rem;
+  --texte-xxl: 2rem;
+  
+  /* Arrondis */
+  --arrondi-s: 4px;
+  --arrondi-m: 8px;
+  --arrondi-l: 16px;
+  --arrondi-rond: 50%;
+  
+  /* Ombre */
+  --ombre: 0 2px 8px rgba(0, 0, 0, 0.2);
+  
+  /* Conteneur */
+  --largeur-max: 1200px;
+}
+
+/* =========== RESET ET BASE =========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: var(--texte-m);
+  line-height: 1.5;
+  color: var(--texte);
+  background-color: var(--fond);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--lien);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+ul {
+  list-style: none;
+}
+
+/* =========== UTILITAIRES =========== */
+.conteneur {
+  width: 100%;
+  max-width: var(--largeur-max);
+  margin: 0 auto;
+  padding: 0 var(--espace-m);
+}
+
+.invisible {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-centre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-espace {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grille {
+  display: grid;
+  gap: var(--espace-m);
+}
+
+/* =========== COMPOSANTS =========== */
+
+/* --- Header --- */
+.entete {
+  background-color: var(--noir);
+  border-bottom: var(--bordure-fine);
+  padding: var(--espace-m) 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.entete-contenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: block;
+}
+
+/* --- Navigation --- */
+.navigation {
+  display: flex;
+  gap: var(--espace-l);
+}
+
+.navigation-lien {
+  color: var(--texte);
+  font-weight: 500;
+  padding: var(--espace-xs);
+  position: relative;
+}
+
+.navigation-lien:hover {
+  color: var(--accent);
+}
+
+.navigation-lien::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.navigation-lien:hover::after {
+  width: 100%;
+}
+
+/* --- Recherche --- */
+.recherche {
+  display: flex;
+  max-width: 300px;
+  position: relative;
+}
+
+.recherche-input {
+  width: 100%;
+  padding: var(--espace-xs) var(--espace-m);
+  border-radius: var(--arrondi-m);
+  border: var(--bordure-fine);
+  background-color: var(--noir);
+  color: var(--texte);
+}
+
+.recherche-bouton {
+  position: absolute;
+  right: var(--espace-xs);
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: var(--gris-moyen);
+  cursor: pointer;
+}
+
+/* --- Panier --- */
+.panier {
+  position: relative;
+  display: flex;
+  color: var(--texte);
+}
+
+.panier-nombre {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: var(--accent);
+  color: var(--blanc);
+  border-radius: var(--arrondi-rond);
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--texte-xs);
+  font-weight: bold;
+}
+
+/* --- Boutons --- */
+.bouton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--espace-xs) var(--espace-l);
+  background-color: var(--accent);
+  color: var(--blanc);
+  border: none;
+  border-radius: var(--arrondi-m);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bouton:hover {
+  background-color: var(--rouge-fonce);
+}
+
+.bouton-secondaire {
+  background-color: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+.bouton-secondaire:hover {
+  background-color: var(--accent);
+  color: var(--blanc);
+}
+
+/* --- Cartes --- */
+.carte {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: var(--arrondi-m);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carte:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--ombre);
+}
+
+.carte-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.carte-contenu {
+  padding: var(--espace-m);
+}
+
+.carte-titre {
+  font-size: var(--texte-l);
+  margin-bottom: var(--espace-xs);
+}
+
+.carte-texte {
+  color: var(--gris-moyen);
+  margin-bottom: var(--espace-s);
+}
+
+.carte-prix {
+  font-weight: bold;
+  color: var(--accent);
+  font-size: var(--texte-l);
+}
+
+/* --- Héro --- */
+.hero {
+  text-align: center;
+  padding: var(--espace-xl) 0;
+}
+
+.titre-site {
+  font-size: var(--texte-xxl);
+  margin-bottom: var(--espace-m);
+  color: var(--accent);
+}
+
+.sous-titre {
+  display: block;
+  font-size: var(--texte-m);
+  color: var(--gris-moyen);
+}
+
+/* --- Sections --- */
+.section {
+  padding: var(--espace-xl) 0;
+}
+
+.titre-section {
+  font-size: var(--texte-xl);
+  margin-bottom: var(--espace-l);
+  position: relative;
+  display: inline-block;
+}
+
+.titre-section::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 50px;
+  height: 3px;
+  background-color: var(--accent);
+}
+
+/* --- Grilles de produits --- */
+.grille-produits {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--espace-l);
+}
+
+/* --- Pied de page --- */
+.pied-page {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-top: var(--bordure-fine);
+  padding: var(--espace-xl) 0;
+}
+
+.pied-page-colonnes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--espace-xl);
+}
+
+.pied-page-titre {
+  font-size: var(--texte-l);
+  margin-bottom: var(--espace-m);
+  color: var(--accent);
+}
+
+.pied-page-liste {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espace-s);
+}
+
+.pied-page-lien {
+  color: var(--gris-moyen);
+}
+
+.pied-page-lien:hover {
+  color: var(--accent);
+}
+
+.copyright {
+  text-align: center;
+  margin-top: var(--espace-xl);
+  color: var(--gris-moyen);
+  font-size: var(--texte-s);
+}
