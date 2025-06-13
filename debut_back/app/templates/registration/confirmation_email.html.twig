@@ -1,0 +1,23 @@
+<h1>Confirmation de votre email</h1>
+
+{% if user.civility == 'mr' %}
+    <p>Bonjour Monsieur {{ user.lastname }} {{ user.firstname }} !</p>
+{% else %}
+    <p>Bonjour Madame {{ user.lastname }} {{ user.firstname }} !</p>
+{% endif %}
+
+
+<
+
+<p>Merci de vous être inscrit sur notre site de vente de Pokémon. Pour activer votre compte, veuillez cliquer sur le lien ci-dessous :</p>
+
+<p>
+    <a href="{{ signedUrl|raw }}">Confirmer mon email</a>
+</p>
+
+<p>Ce lien expirera dans {{ expiresAtMessageKey|trans(expiresAtMessageData, 'VerifyEmailBundle') }}.</p>
+
+<p>Votre demande de creation à ete effectuée le {{ createdAt|date('d/m/Y H:i') }}. Si vous n'avez pas créé de compte, vous pouvez ignorer cet email.</p>
+
+<p>Cordialement,<br>
+L'équipe Destocard</p>

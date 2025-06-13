@@ -1,0 +1,339 @@
+:root {
+    --primary-color: #ff4500;       /* Rouge/Orange pour accents, boutons */
+    --primary-hover-color: #e03e00; /* Hover plus foncé */
+    --bg-dark: #121212;              /* Fond principal très sombre */
+    --bg-header: #1e1e1e;            /* Fond du header, légèrement moins sombre */
+    --bg-surface: #2a2a2a;           /* Fond pour cartes, éléments en relief */
+    --text-light: #e0e0e0;           /* Texte principal clair */
+    --text-medium: #a0a0a0;          /* Texte secondaire, liens de nav */
+    --border-color: #383838;         /* Bordures subtiles */
+    --card-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+    --font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+main {
+    flex-grow: 1;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--primary-hover-color);
+    text-decoration: none; /* Pas de soulignement au survol par défaut pour ce design */
+}
+
+/* ---------------------------------------------------- */
+/*                        HEADER                        */
+/* ---------------------------------------------------- */
+header {
+    background-color: var(--bg-header);
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-logo {
+    height: 45px;
+}
+
+.search-bar {
+    flex-grow: 1;
+    max-width: 450px;
+}
+.search-bar input[type="search"] {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+.search-bar input[type="search"]::placeholder {
+    color: var(--text-medium);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+.main-nav ul li a {
+    color: var(--text-medium);
+    padding: 8px 12px;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: color 0.2s ease;
+}
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+    color: var(--primary-color);
+}
+
+.cart-icon-container a {
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+.cart-icon-container a:hover {
+    background-color: var(--primary-hover-color);
+}
+.cart-icon-container img {
+    height: 20px; /* Ajustez si votre icône est différente */
+    margin-right: 5px;
+    filter: brightness(0) invert(1); /* Rend l'icône SVG/PNG noire en blanc */
+}
+.cart-icon-container .cart-count {
+    font-size: 0.9rem;
+}
+
+/* ---------------------------------------------------- */
+/*                     SECTIONS INDEX                   */
+/* ---------------------------------------------------- */
+.section-padding {
+    padding: 40px 0;
+}
+
+.section-heading {
+    font-size: 1.8rem;
+    color: var(--text-light);
+    margin-bottom: 25px;
+    /* text-align: center; Si vous préférez les titres centrés */
+}
+
+/* Hero Section (Destocard titre) */
+.hero-section {
+    text-align: center;
+    padding: 60px 0 40px;
+}
+.site-title-big {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+}
+.site-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-medium);
+}
+
+/* Game Choice Section */
+.game-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Si une seule carte comme Pokémon */
+    /* Si plusieurs : grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
+    gap: 20px;
+}
+.game-card {
+    display: block;
+    background-color: var(--bg-surface);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow);
+}
+.game-card img { /* L'image du jeu (ex: Pokémon.png) */
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Category Buttons Section */
+.category-buttons-section {
+    text-align: center;
+}
+.category-buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+/* Boutons .btn (générique mais utilisé pour les catégories ici) */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px; /* Bords très arrondis */
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    border: none;
+}
+.btn.btn-category { /* Spécifique pour ces boutons ou utiliser .btn-primary */
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+.btn.btn-category:hover {
+    background-color: var(--primary-hover-color);
+    transform: scale(1.03);
+}
+
+
+/* ---------------------------------------------------- */
+/*     CARTES PRODUITS (Adapté de product_details2.css) */
+/* ---------------------------------------------------- */
+.featured-products-section .products-grid,
+.latest-products-section .products-grid { /* Si vous avez une section "derniers produits" */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Ajustez minmax */
+    gap: 20px;
+}
+
+.product-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 15px;
+    text-align: left; /* Le texte dans les cartes de produit_details2.css est à gauche */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow);
+}
+
+.product-card .product-image-container {
+    margin-bottom: 15px;
+    background-color: var(--bg-dark); /* Fond pour l'image si elle a de la transparence */
+    border-radius: 4px; /* Arrondir le conteneur de l'image */
+    padding: 10px; /* Un peu d'espace autour de l'image */
+    display: flex; /* Pour centrer l'image si elle est plus petite */
+    justify-content: center;
+    align-items: center;
+    min-height: 180px; /* Hauteur minimale pour l'image */
+}
+.product-card .product-image-container img {
+    max-height: 160px; /* L'image elle-même */
+    object-fit: contain;
+}
+
+.product-card .product-name {
+    font-size: 1rem; /* Taille de product_details2.css .product-info h2 */
+    color: var(--text-light);
+    margin-bottom: 8px;
+    font-weight: bold; /* Similaire à h2 */
+    min-height: 40px; /* Pour 2 lignes */
+}
+
+.product-card .product-price {
+    font-size: 1.1rem; /* Taille de product_details2.css .product-info .product-price */
+    font-weight: bold;
+    color: var(--primary-color); /* Prix en couleur accent */
+    margin-bottom: 15px;
+}
+
+/* Bouton "Voir le produit" adapté de .add-to-cart-btn de product_details2.css */
+.product-card .btn-view-product {
+    /* Hérite de .btn, mais peut avoir des styles spécifiques */
+    width: 100%; /* Prend toute la largeur de la carte */
+    background-color: var(--primary-color); /* Fond rouge/orange */
+    color: var(--text-light);
+    margin-top: auto; /* Pousse en bas */
+    padding: 10px 15px; /* Moins de padding que les boutons principaux */
+    border-radius: 5px; /* Bords moins arrondis que les boutons de catégorie */
+}
+.product-card .btn-view-product:hover {
+    background-color: var(--primary-hover-color);
+    transform: none; /* Pas de scale pour ces boutons pour rester simple */
+}
+
+
+/* ---------------------------------------------------- */
+/*                        FOOTER                        */
+/* ---------------------------------------------------- */
+footer {
+    background-color: var(--bg-header); /* Même fond que le header */
+    color: var(--text-medium);
+    text-align: center;
+    padding: 2.5rem 0;
+    margin-top: auto;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+}
+footer p {
+    margin: 0;
+}
+
+/* ---------------------------------------------------- */
+/*                     MEDIA QUERIES                    */
+/* ---------------------------------------------------- */
+@media (max-width: 992px) { /* Tablettes */
+    .header-content {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .search-bar {
+        order: 3; width: 100%; max-width: 100%; margin-top: 10px;
+    }
+    .main-nav { order: 2; margin-top: 10px; } /* Nav au-dessus de la recherche */
+    .logo-link { order: 1; }
+    .cart-icon-container { order: 1; margin-left: auto; /* Pousse le panier à droite du logo */} /* Panier à côté du logo */
+}
+
+@media (max-width: 768px) { /* Mobiles */
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        width: 100%;
+    }
+    .main-nav ul li a { display: block; width: 100%; text-align: center; }
+
+    .site-title-big { font-size: 2.8rem; }
+    .category-buttons-container { flex-direction: column; }
+    .btn.btn-category { width: 100%; margin-bottom: 10px; }
+}

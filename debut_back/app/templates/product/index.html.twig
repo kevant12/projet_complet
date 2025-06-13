@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}listes des articles!{% endblock %}
+
+{% block body %}
+<section>
+    <div class="">
+        <h1>Liste des articles</h1>
+        <a href="{{path('app_article_add')}}">Ajouter un article</a>
+    </div>
+    <div class="">
+        {% for product in products %}
+            <h2>{{ product.title|escape }}</h2>
+            <p>{{ product.content|escape }}</p>
+            <p>{{ product.created_at|date("d/m/Y") }}</p>
+            {#<a href="{{path('app_edit_article', {id:article.id})}}">modifier</a>#}
+            {#<a href="{{path('app_delete_article', {id:article.id})}}">Suppression</a>#}
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

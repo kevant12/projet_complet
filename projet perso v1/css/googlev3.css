@@ -1,0 +1,528 @@
+
+
+:root {
+    /* Palette de couleurs pour un thème sombre inspiré de Destocard/Ectoplasma */
+    --color-background: #1C1725; /* Fond principal très sombre, légèrement teinté de violet/bleu */
+    --color-background-alt: #282133; /* Fond alternatif un peu plus clair pour les sections */
+    --color-text: #F0F0F0; /* Texte principal très clair (proche du blanc) */
+    --color-text-light: #B0B0B0; /* Texte secondaire ou moins important (gris clair) */
+    --color-primary: #D8B4FE; /* Violet clair vibrant pour les éléments interactifs et accents principaux */
+    --color-secondary: #FACC15; /* Jaune doré ou orange pour les accents secondaires et hover (contraste) */
+    --color-accent: #F472B6; /* Rose/Magenta pour des accents spécifiques (inspiré du logo et des attaques) */
+    --color-border: #444444; /* Bordures sombres */
+    --color-success: #4ADE80; /* Vert pour les messages de succès (contraste sur fond sombre) */
+    --color-error: #F87171; /* Rouge clair pour les messages d'erreur (contraste sur fond sombre, inspiré des yeux d'Ectoplasma) */
+
+    /* Espacement (inchangé) */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+
+    /* Typographie (inchangé, les couleurs seront appliquées par les variables) */
+    --font-family-primary: 'Open Sans', sans-serif;
+    --font-family-secondary: 'Montserrat', sans-serif;
+    --font-size-xs: 0.75rem;   /* 12px */
+    --font-size-sm: 0.875rem;  /* 14px */
+    --font-size-md: 1rem;      /* 16px */
+    --font-size-lg: 1.25rem;   /* 20px */
+    --font-size-xl: 1.5rem;    /* 24px */
+    --font-size-xxl: 2rem;     /* 32px */
+
+    /* Bordures (inchangé, les couleurs seront appliquées par les variables) */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+
+    /* Ombres (inchangé, l'effet sera différent sur fond sombre mais souvent souhaitable) */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+    /* Transitions (inchangé) */
+    --transition-fast: 150ms ease;
+    --transition-medium: 300ms ease;
+    --transition-slow: 500ms ease;
+
+    /* Conteneur (inchangé) */
+    --container-width: 1200px;
+}
+
+/* Reset CSS moderne (inchangé) */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-md);
+    line-height: 1.5;
+    color: var(--color-text); /* Utilisation de la nouvelle couleur de texte claire */
+    background-color: var(--color-background); /* Utilisation du nouveau fond sombre */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    vertical-align: middle;
+}
+
+a {
+    color: var(--color-primary); /* Liens en couleur primaire claire */
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--color-secondary); /* Liens au survol en couleur secondaire (contraste) */
+    text-decoration: underline;
+}
+
+/* Éléments de base */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-secondary);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text); /* Les titres utilisent la couleur de texte principale */
+}
+
+h1 { font-size: var(--font-size-xxl); }
+h2 { font-size: var(--font-size-xl); }
+h3 { font-size: var(--font-size-lg); }
+
+p, ul, ol {
+    margin-bottom: var(--spacing-md);
+}
+
+button, .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--color-primary); /* Boutons en couleur primaire */
+    color: var(--color-background); /* Texte des boutons en couleur de fond sombre pour contraste */
+    border-radius: var(--border-radius-sm);
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+button:hover, .button:hover {
+    background-color: var(--color-secondary); /* Boutons au survol en couleur secondaire */
+    text-decoration: none;
+    color: var(--color-background); /* Conserver la couleur du texte sombre */
+}
+
+.container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* Header */
+.header {
+    background-color: var(--color-background); /* Header sur fond sombre */
+    box-shadow: var(--shadow-md);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+}
+
+.logo {
+    font-family: var(--font-family-secondary);
+    font-weight: 700;
+    font-size: var(--font-size-lg);
+    color: var(--color-primary); /* Logo en couleur primaire */
+}
+
+.nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--color-text); /* Icône du toggle en couleur texte claire */
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: var(--color-background-alt); /* Menu mobile sur fond alternatif sombre */
+    box-shadow: var(--shadow-md);
+    padding: var(--spacing-md);
+}
+
+.nav.active {
+    display: block;
+}
+
+.nav-list {
+    list-style: none;
+}
+
+.nav-item {
+    margin-bottom: var(--spacing-sm);
+}
+
+.nav-link {
+    color: var(--color-text-light); /* Liens de navigation en texte clair secondaire */
+    font-weight: 600;
+    transition: color var(--transition-fast);
+    padding: var(--spacing-xs) 0;
+    display: block;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--color-primary); /* Liens de navigation actifs/survol en couleur primaire */
+}
+
+/* Hero Section */
+.hero {
+    background-color: var(--color-background-alt); /* Section Hero sur fond alternatif sombre */
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+}
+
+.hero-title {
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-primary); /* Titre Hero en couleur primaire */
+}
+
+.hero-subtitle {
+    font-size: var(--font-size-lg);
+    max-width: 800px;
+    margin: 0 auto var(--spacing-lg);
+    color: var(--color-text-light); /* Sous-titre Hero en texte clair secondaire */
+}
+
+/* Cards */
+.card {
+    background-color: var(--color-background-alt); /* Cartes sur fond alternatif sombre */
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md); /* Les ombres fonctionnent bien sur fond sombre */
+    overflow: hidden;
+    margin-bottom: var(--spacing-lg);
+    transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+    border: 1px solid var(--color-border); /* Ajout d'une bordure subtile */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card-image {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: var(--spacing-md);
+}
+
+.card-title {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text); /* Titre de carte en texte principal */
+}
+
+.card-text {
+    color: var(--color-text-light); /* Texte de carte en texte secondaire */
+    margin-bottom: var(--spacing-md);
+}
+
+/* Features Section */
+.features {
+    padding: var(--spacing-xl) 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    color: var(--color-text); /* Titre de section en texte principal */
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+}
+
+.feature-item {
+    text-align: center;
+    padding: var(--spacing-md);
+    background-color: var(--color-background-alt); /* Éléments de feature sur fond alternatif */
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border); /* Ajout d'une bordure subtile */
+}
+
+.feature-icon {
+    font-size: 2rem;
+    color: var(--color-primary); /* Icônes de feature en couleur primaire */
+    margin-bottom: var(--spacing-sm);
+}
+
+.feature-title {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text); /* Titre de feature en texte principal */
+}
+
+/* Testimonials */
+.testimonials {
+    background-color: var(--color-background-alt); /* Section Testimonials sur fond alternatif */
+    padding: var(--spacing-xl) 0;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+}
+
+.testimonial {
+    background-color: var(--color-background); /* Témoignages sur fond principal sombre (contraste avec la section) */
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-border); /* Ajout d'une bordure subtile */
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text-light); /* Texte de témoignage en texte secondaire */
+}
+
+.testimonial-author {
+    font-weight: 600;
+    color: var(--color-primary); /* Auteur de témoignage en couleur primaire */
+}
+
+/* Contact Form */
+.contact {
+    padding: var(--spacing-xl) 0;
+}
+
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.form-label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 600;
+    color: var(--color-text); /* Labels de formulaire en texte principal */
+}
+
+.form-control {
+    width: 100%;
+    padding: var(--spacing-sm);
+    border: 1px solid var(--color-border); /* Bordure des champs en couleur de bordure sombre */
+    border-radius: var(--border-radius-sm);
+    background-color: #333333; /* Fond sombre spécifique pour les champs */
+    color: var(--color-text); /* Texte saisi en couleur principale */
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--color-primary); /* Bordure au focus en couleur primaire */
+}
+
+/* Footer */
+.footer {
+    background-color: var(--color-background-alt); /* Footer sur fond alternatif sombre */
+    padding-top: var(--spacing-xl);
+    border-top: 1px solid var(--color-border); /* Bordure supérieure en couleur de bordure sombre */
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+}
+
+.footer-title {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text); /* Titre du footer en texte principal */
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-link a { /* Cible les liens à l'intérieur des items de liste du footer */
+    color: var(--color-text-light); /* Liens du footer en texte secondaire */
+    transition: color var(--transition-fast);
+}
+
+.footer-link a:hover {
+    color: var(--color-primary); /* Liens du footer au survol en couleur primaire */
+    text-decoration: underline;
+}
+
+
+.footer-bottom {
+    text-align: center;
+    padding: var(--spacing-md) 0;
+    margin-top: var(--spacing-lg);
+    border-top: 1px solid var(--color-border); /* Bordure supérieure du bas du footer */
+    color: var(--color-text-light); /* Texte du bas du footer en texte secondaire */
+    font-size: var(--font-size-sm);
+}
+
+/* MEDIA QUERIES (inchangé, les couleurs s'appliqueront automatiquement) */
+
+/* Tablette (768px et plus) */
+@media (min-width: 768px) {
+    :root {
+        /* Ajustement facultatif de la taille de base sur les écrans plus grands si souhaité */
+        /* --font-size-md: 1.125rem; */
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-lg);
+    }
+
+    /* Form layout */
+    .form-row {
+        display: flex;
+        margin-left: var(--spacing-sm);
+        margin-right: var(--spacing-sm);
+    }
+
+    .form-col {
+        flex: 1;
+        padding: 0 var(--spacing-sm);
+    }
+}
+
+/* Desktop (992px et plus) */
+@media (min-width: 992px) {
+    .header-container {
+        height: 80px;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav {
+        display: block;
+        position: static;
+        padding: 0;
+        box-shadow: none;
+        background-color: transparent; /* Pas de fond spécifique pour la nav sur desktop */
+    }
+
+    .nav-list {
+        display: flex;
+        gap: var(--spacing-md);
+    }
+
+    .nav-item {
+        margin-bottom: 0;
+    }
+
+    .nav-link {
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .testimonial-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Two-column layout */
+    .two-column {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-xl);
+        align-items: center;
+    }
+}
+
+/* Large Desktop (1200px et plus) */
+@media (min-width: 1200px) {
+    .card-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .container {
+        padding: 0 var(--spacing-xl);
+    }
+}
+
+/* Animations (inchangé) */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+
+
+

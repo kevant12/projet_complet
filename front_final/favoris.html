@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Favoris - Votre Boutique</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- CSS unifié -->
+</head>
+<body>
+<header>
+    <h1>Votre Boutique</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="products.html">Produits</a></li>
+            <li><a href="panier.html">Panier</a></li>
+            <li><a href="login.html">Connexion</a></li>
+            <li><a href="signup.html">Inscription</a></li>
+            <li><a href="compte.html">Mon Compte</a></li>
+            <!-- On pourrait ajouter un lien direct vers les favoris ici si l'utilisateur est connecté -->
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="container">
+        <section class="favorites-page products-section"> <!-- Réutiliser .products-section pour le titre -->
+            <h2>Mes Favoris</h2>
+
+            <div id="favorites-grid" class="products-grid">
+                <!-- Les produits favoris seront insérés ici par JavaScript -->
+                <!-- Exemple de produit favori (même structure que .product-card) -->
+
+                <article class="product-card">
+                    <img src="images/product_image_example.jpg" alt="Nom du Produit Favori">
+                    <h4>Nom du Produit Favori</h4>
+                    <p class="product-price">€XX.XX</p>
+                    <div class="product-card-actions">
+                        <a href="product_details.html?id=ID_PRODUIT" class="btn btn-primary">Voir Détails</a>
+                        <button class="btn btn-secondary remove-favorite-btn" data-product-id="ID_PRODUIT">Retirer</button>
+                    </div>
+                </article>
+                -->
+            </div>
+            <p id="no-favorites-message" style="display:none; text-align:center; margin-top: 20px;">
+                Vous n'avez aucun produit dans vos favoris pour le moment.
+                <br>
+                <a href="products.html">Parcourir les produits</a>
+            </p>
+        </section>
+    </div>
+</main>
+
+<footer>
+    <p>© 2023 Votre Boutique. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Destocard - Site spécialisé dans la vente de cartes Pokémon, créé par un passionné pour les passionnés.">
+    <meta name="theme-color" content="#ffffff">
+    <title>Destocard - Cartes Pokémon et objets de collection</title>
+
+    <!-- Préchargement des ressources critiques -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preload" as="image" href="images/logo.webp">
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="../projet_v3/css/style_guide_variables.css">
+</head>
+<body>
+<header class="entete">
+    <div class="conteneur entete-contenu">
+        <a href="index.html" class="logo" aria-label="Destocard - Page d'accueil">
+            <img src="images/logo.webp" alt="Logo Destocard" width="150" height="50">
+        </a>
+
+        <form class="recherche" role="search" aria-label="Rechercher sur le site">
+            <input type="search" class="recherche-input" placeholder="Veuillez entrer une recherche" aria-label="Recherche">
+            <button type="submit" class="recherche-bouton" aria-label="Rechercher">
+                <svg width="20" height="20" aria-hidden="true">
+                    <use href="sprite.svg#search"></use>
+                </svg>
+            </button>
+        </form>
+
+        <a href="panier.html" class="panier" aria-label="Panier d'achat">
+            <svg width="30" height="30" aria-hidden="true">
+                <use href="sprite.svg#panier"></use>
+            </svg>
+            <span class="panier-nombre" aria-live="polite">0</span>
+        </a>
+
+        <!-- Navigation desktop -->
+        <nav class="navigation" aria-label="Navigation principale">
+            <ul class="flex">
+                <li><a href="nouveautes.html" class="navigation-lien">Nouveautés</a></li>
+                <li><a href="promotions.html" class="navigation-lien">Promotions</a></li>
+                <li><a href="scelles.html" class="navigation-lien">Scellés</a></li>
+                <li><a href="cartes-unite.html" class="navigation-lien">Cartes à l'unité</a></li>
+                <li><a href="gradees.html" class="navigation-lien">Gradées</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="conteneur">
+            <h1 class="titre-site">
+                Destocard
+                <span class="sous-titre">Créé par un passionné pour les passionnés</span>
+            </h1>
+            <div class="hero-content">
+                <!-- Contenu héro, peut-être un carrousel ou une image principale -->
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="conteneur">
+            <h2 class="titre-section">Choisissez votre jeu</h2>
+            <div class="grille grille-produits">
+                <a href="pokemon.html" class="carte">
+                    <img src="images/pokemon-logo.webp" alt="Pokémon" width="200" height="120" loading="lazy" class="carte-image">
+                </a>
+                <!-- Ajoutez d'autres jeux si nécessaire -->
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="conteneur">
+            <h2 class="titre-section invisible">Catégories de produits</h2>
+            <nav aria-label="Catégories de produits">
+                <ul class="flex flex-centre" style="gap: var(--espace-l);">
+                    <li><a href="produits-scelles.html" class="bouton">Produits scellés</a></li>
+                    <li><a href="cartes-unite.html" class="bouton">Cartes à l'unité</a></li>
+                    <li><a href="cartes-gradees.html" class="bouton">Cartes gradées</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="conteneur">
+            <h2 class="titre-section">Extensions à la une</h2>
+            <div class="grille grille-produits">
+                <!-- Exemple de carte produit -->
+                <article class="carte">
+                    <a href="extension-detail.html">
+                        <img src="images/extensions/paradoxe-temporel.webp" alt="Booster Pokémon Paradoxe Temporel" class="carte-image" loading="lazy" width="250" height="150">
+                        <div class="carte-contenu">
+                            <h3 class="carte-titre">Paradoxe Temporel</h3>
+                            <p class="carte-texte">Extension Épée et Bouclier</p>
+                            <p class="carte-prix">À partir de 5,99 €</p>
+                        </div>
+                    </a>
+                </article>
+                <!-- Répétez pour d'autres produits -->
+            </div>
+            <div class="flex-centre" style="margin-top: var(--espace-l);">
+                <a href="toutes-extensions.html" class="bouton-secondaire">Voir toutes les extensions</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="conteneur">
+            <h2 class="titre-section">Nouveautés</h2>
+            <div class="grille grille-produits">
+                <!-- Exemple de carte produit -->
+                <article class="carte">
+                    <a href="carte-detail.html">
+                        <img src="images/cartes/dracaufeu-vstar.webp" alt="Carte Dracaufeu VSTAR" class="carte-image" loading="lazy" width="250" height="350">
+                        <div class="carte-contenu">
+                            <h3 class="carte-titre">Dracaufeu VSTAR</h3>
+                            <p class="carte-texte">Ultra Rare | Mint</p>
+                            <p class="carte-prix">129,99 €</p>
+                        </div>
+                    </a>
+                </article>
+                <!-- Répétez pour d'autres produits -->
+            </div>
+            <div class="flex-centre" style="margin-top: var(--espace-l);">
+                <a href="nouveautes.html" class="bouton-secondaire">Voir toutes les nouveautés</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="conteneur">
+            <h2 class="titre-section">Pourquoi choisir Destocard?</h2>
+            <div class="grille" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="flex-centre" style="flex-direction: column; text-align: center;">
+                    <svg width="48" height="48" aria-hidden="true">
+                        <use href="sprite.svg#qualite"></use>
+                    </svg>
+                    <h3 style="margin: var(--espace-s) 0;">Qualité garantie</h3>
+                    <p>Toutes nos cartes sont inspectées minutieusement pour garantir leur authenticité et état.</p>
+                </div>
+                <div class="flex-centre" style="flex-direction: column; text-align: center;">
+                    <svg width="48" height="48" aria-hidden="true">
+                        <use href="sprite.svg#expedition"></use>
+                    </svg>
+                    <h3 style="margin: var(--espace-s) 0;">Expédition rapide</h3>
+                    <p>Commandes expédiées sous 24h et soigneusement emballées pour une protection optimale.</p>
+                </div>
+                <div class="flex-centre" style="flex-direction: column; text-align: center;">
+                    <svg width="48" height="48" aria-hidden="true">
+                        <use href="sprite.svg#service"></use>
+                    </svg>
+                    <h3 style="margin: var(--espace-s) 0;">Service client</h3>
+                    <p>Une équipe passionnée à votre écoute pour répondre à toutes vos questions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="pied-page">
+    <div class="conteneur">
+        <div class="pied-page-colonnes">
+            <div>
+                <h2 class="pied-page-titre">Informations</h2>
+                <ul class="pied-page-liste">
+                    <li><a href="a-propos.html" class="pied-page-lien">À propos</a></li>
+                    <li><a href="conditions-generales.html" class="pied-page-lien">Conditions générales</a></li>
+                    <li><a href="confidentialite.html" class="pied-page-lien">Politique de confidentialité</a></li>
+                    <li><a href="faq.html" class="pied-page-lien">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="pied-page-titre">Mon compte</h2>
+                <ul class="pied-page-liste">
+                    <li><a href="connexion.html" class="pied-page-lien">Connexion</a></li>
+                    <li><a href="inscription.html" class="pied-page-lien">Inscription</a></li>
+                    <li><a href="commandes.html" class="pied-page-lien">Mes commandes</a></li>
+                    <li><a href="favoris.html" class="pied-page-lien">Liste de souhaits</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="pied-page-titre">Service client</h2>
+                <ul class="pied-page-liste">
+                    <li><a href="contact.html" class="pied-page-lien">Contact</a></li>
+                    <li><a href="retours.html" class="pied-page-lien">Retours et remboursements</a></li>
+                    <li><a href="expedition.html" class="pied-page-lien">Expédition et livraison</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="pied-page-titre">Suivez-nous</h2>
+                <div class="flex" style="gap: var(--espace-m);">
+                    <a href="https://instagram.com/destocard" aria-label="Instagram" class="pied-page-lien">
+                        <svg width="24" height="24" aria-hidden="true">
+                            <use href="sprite.svg#instagram"></use>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/destocard" aria-label="Twitter" class="pied-page-lien">
+                        <svg width="24" height="24" aria-hidden="true">
+                            <use href="sprite.svg#twitter"></use>
+                        </svg>
+                    </a>
+                    <a href="https://facebook.com/destocard" aria-label="Facebook" class="pied-page-lien">
+                        <svg width="24" height="24" aria-hidden="true">
+                            <use href="sprite.svg#facebook"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">© 2023 Destocard. Tous droits réservés.</p>
+    </div>
+</footer>
+</body>
+</html>

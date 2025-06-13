@@ -1,0 +1,7 @@
+symfonycasts_verify_email:
+    lifetime: 3600 # durée de validité du lien en secondes (1 heure)
+    # success_route: app_register # route de redirection après vérification réussie
+    # failure_route: app_accueil # route de redirection en cas d'échec
+    # from_email:
+    #     address: 'noreply@votresite.com'
+    #     sender_name: 'Votre Site de Vente Pokemon' 

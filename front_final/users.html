@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Compte - Votre Boutique</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- CSS unifié -->
+</head>
+<body>
+<header>
+    <h1>Votre Boutique</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="products.html">Produits</a></li>
+            <li><a href="panier.html">Panier</a></li>
+            <li><a href="login.html">Connexion</a></li> <!-- Ou "Déconnexion" si l'utilisateur est connecté -->
+            <li><a href="signup.html">Inscription</a></li>
+            <li><a href="compte.html" class="active">Mon Compte</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="container">
+        <section class="account-page">
+            <h2>Mon Compte</h2>
+            <div class="account-container">
+                <aside class="account-nav">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="#informations-personnelles" class="account-nav-link active-nav">Informations Personnelles</a></li>
+                        <li><a href="#historique-commandes" class="account-nav-link">Historique des Commandes</a></li>
+                        <li><a href="#mes-adresses" class="account-nav-link">Mes Adresses</a></li>
+                        <li><a href="favoris.html">Mes Favoris</a></li>
+                        <li><a href="#parametres" class="account-nav-link">Paramètres du compte</a></li>
+                        <li><a href="#" id="logout-btn">Déconnexion</a></li>
+                    </ul>
+                </aside>
+                <section class="account-content">
+                    <div id="informations-personnelles" class="account-section active-section">
+                        <h3>Informations Personnelles</h3>
+                        <form id="profile-form">
+                            <div class="form-group">
+                                <label for="account-name">Nom :</label>
+                                <input type="text" id="account-name" name="name" value="Jean Dupont (exemple)">
+                            </div>
+                            <div class="form-group">
+                                <label for="account-email">Email :</label>
+                                <input type="email" id="account-email" name="email" value="jean.dupont@example.com" readonly>
+                                <small>L'email ne peut pas être modifié.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="account-phone">Téléphone (optionnel) :</label>
+                                <input type="tel" id="account-phone" name="phone">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Mettre à jour</button>
+                        </form>
+                        <hr>
+                        <h4>Changer de mot de passe</h4>
+                        <form id="change-password-form">
+                            <div class="form-group">
+                                <label for="current-password">Mot de passe actuel :</label>
+                                <input type="password" id="current-password" name="current_password" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="new-password">Nouveau mot de passe :</label>
+                                <input type="password" id="new-password" name="new_password" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirm-password">Confirmer le nouveau mot de passe :</label>
+                                <input type="password" id="confirm-password" name="confirm_password" required>
+                            </div>
+                            <button type="submit" class="btn btn-secondary">Changer le mot de passe</button>
+                        </form>
+                    </div>
+
+                    <div id="historique-commandes" class="account-section">
+                        <h3>Historique des Commandes</h3>
+                        <p>Vous n'avez aucune commande pour le moment.</p>
+                        Exemple de structure de commande
+
+                        <article class="order-history-item">
+                            <div class="order-summary">
+                                <h4>Commande #12345 - 15 Octobre 2023</h4>
+                                <p>Statut : Livrée</p>
+                                <p>Total : 75,50 €</p>
+                            </div>
+                            <a href="details_commande.html?id=12345" class="btn btn-secondary">Voir détails</a>
+                        </article>
+
+                    </div>
+
+                    <div id="mes-adresses" class="account-section">
+                        <h3>Mes Adresses</h3>
+                        <p>Vous n'avez pas encore d'adresse enregistrée.</p>
+                        <button class="btn btn-primary" id="add-address-btn">Ajouter une nouvelle adresse</button>
+                        <!-- Les adresses s'afficheront ici -->
+                    </div>
+
+                    <div id="parametres" class="account-section">
+                        <h3>Paramètres du compte</h3>
+                        <p>Options pour les notifications par email, etc.</p>
+                        <!-- Ex: Thème sombre/clair si géré ici -->
+                        <div class="form-group">
+                            <label for="theme-selector">Thème du site :</label>
+                            <select id="theme-selector" name="theme">
+                                <option value="light">Clair</option>
+                                <option value="dark">Sombre</option>
+                                <option value="system">Préférence système</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </div>
+</main>
+
+<footer>
+    <p>© 2023 Votre Boutique. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>

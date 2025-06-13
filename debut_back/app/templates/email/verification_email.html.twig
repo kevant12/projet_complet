@@ -1,0 +1,16 @@
+<h1>Vérification de votre email</h1>
+
+<p>Bonjour {{ user.civilite }} {{ user.firstname }} {{ user.lastname }} !</p>
+
+<p>Merci de vous être inscrit sur notre site de vente de Pokémon. Pour activer votre compte, veuillez cliquer sur le lien ci-dessous :</p>
+
+<p>
+    <a href="{{ signedUrl|raw }}">Vérifier mon email</a>
+</p>
+
+<p>Ce lien expirera dans {{ expiresAtMessageKey|trans(expiresAtMessageData, 'VerifyEmailBundle') }}.</p>
+
+<p>Si vous n'avez pas créé de compte, vous pouvez ignorer cet email.</p>
+
+<p>Cordialement,<br>
+L'équipe de Vente de Pokémon</p> 

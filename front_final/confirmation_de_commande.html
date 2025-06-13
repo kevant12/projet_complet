@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commande Confirmée - Votre Boutique</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- CSS unifié -->
+</head>
+<body>
+<header>
+    <h1>Votre Boutique</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="products.html">Produits</a></li>
+            <li><a href="panier.html">Panier</a></li>
+            <li><a href="compte.html">Mon Compte</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="container">
+        <section class="confirmation-page">
+            <div class="confirmation-icon">
+                <!-- Tu peux utiliser une icône SVG ou une image ici -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16" style="color: var(--success-color);">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                </svg>
+            </div>
+            <h2>Merci pour votre commande !</h2>
+            <p>Votre commande #<span id="order-number">CMD12345XYZ</span> a été enregistrée avec succès.</p>
+            <p>Un email de confirmation avec les détails de votre commande vous a été envoyé à <span id="customer-email">votreadresse@email.com</span>.</p>
+            <p>Vous pouvez suivre l'état de votre commande dans la section <a href="compte.html#historique-commandes">"Mon Compte"</a>.</p>
+
+            <div class="confirmation-actions">
+                <a href="products.html" class="btn btn-primary">Continuer mes achats</a>
+                <a href="compte.html" class="btn btn-secondary">Aller à mon compte</a>
+            </div>
+
+            <!-- Optionnel: récapitulatif succinct de la commande -->
+            <div class="order-summary-confirmation">
+                <h4>Récapitulatif de la commande :</h4>
+                <ul>
+                    <li>Produit A (x1) - 29.99 €</li>
+                    <li>Produit B (x2) - 39.98 €</li>
+                </ul>
+                <p><strong>Total payé : 69.97 €</strong></p>
+            </div>
+        </section>
+    </div>
+</main>
+
+<footer>
+    <p>© 2023 Votre Boutique. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>

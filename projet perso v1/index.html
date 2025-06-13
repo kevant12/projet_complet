@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Destocard - Site spécialisé dans la vente de cartes Pokémon, créé par un passionné pour les passionnés.">
+    <meta name="theme-color" content="#ffffff">
+    <title>Destocard - Cartes Pokémon et objets de collection</title>
+<!--    <link rel="stylesheet" href="css/style-index.css">-->
+<!--    <link rel="stylesheet" href="css/style-v1google.css">-->
+<!--    <link rel="stylesheet" href="css/style-indexv2claude.css">-->
+<!--    <link rel="stylesheet" href="css/claudev3mediaqueriok-sanscolor.css">-->
+    <link rel="stylesheet" href="../front_final/css/claudev3mediapasokcolors.css">
+
+<!--    <link rel="stylesheet" href="css/googlev3.css">-->
+<!--    <link rel="stylesheet" href="css/claudev4.css">-->
+    <!-- Préchargement des ressources critiques -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preload" as="image" href="images/logo.webp">
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+<header class="site-header">
+    <div class="container header-container">
+        <a href="index.html" class="logo" aria-label="Destocard - Page d'accueil">
+            <img src="images/logo.webp" alt="Logo Destocard" width="150" height="50">
+        </a>
+
+        <form class="search-form" role="search" aria-label="Rechercher sur le site">
+            <input type="search" class="search-bar" placeholder="Veuillez entrer une recherche" aria-label="Recherche">
+            <button type="submit" class="search-button" aria-label="Rechercher">
+                <svg width="20" height="20" aria-hidden="true">
+                    <use href="sprite.svg#search"></use>
+                </svg>
+            </button>
+        </form>
+
+        <a href="panier.html" class="cart-button" aria-label="Panier d'achat">
+            <svg width="30" height="30" aria-hidden="true">
+                <use href="sprite.svg#panier"></use>
+            </svg>
+            <span class="cart-count" aria-live="polite">0</span>
+        </a>
+
+        <!-- Navigation desktop -->
+        <nav class="main-nav" aria-label="Navigation principale">
+            <ul class="nav-list">
+                <li><a href="nouveautes.html">Nouveautés</a></li>
+                <li><a href="promotions.html">Promotions</a></li>
+                <li><a href="scelles.html">Scellés</a></li>
+                <li><a href="cartes-unite.html">Cartes à l'unité</a></li>
+                <li><a href="gradees.html">Gradées</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="container">
+            <h1 class="site-title">
+                Destocard
+                <span class="site-tagline">Créé par un passionné pour les passionnés</span>
+            </h1>
+            <div class="hero-content">
+                <!-- Contenu héro, peut-être un carrousel ou une image principale -->
+            </div>
+        </div>
+    </section>
+
+    <section class="choose-tcg">
+        <div class="container">
+            <h2 class="section-title">Choisissez votre jeu</h2>
+            <div class="tcg-grid">
+                <a href="pokemon.html" class="tcg-card">
+                    <img src="images/pokemon-logo.webp" alt="Pokémon" width="200" height="120" loading="lazy">
+                </a>
+                <!-- Ajoutez d'autres jeux si nécessaire -->
+            </div>
+        </div>
+    </section>
+
+    <section class="product-categories">
+        <div class="container">
+            <h2 class="section-title visually-hidden">Catégories de produits</h2>
+            <nav class="categories-nav" aria-label="Catégories de produits">
+                <ul class="categories-list">
+                    <li><a href="produits-scelles.html" class="category-button">Produits scellés</a></li>
+                    <li><a href="cartes-unite.html" class="category-button">Cartes à l'unité</a></li>
+                    <li><a href="cartes-gradees.html" class="category-button">Cartes gradées</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <section class="featured-extension">
+        <div class="container">
+            <h2 class="section-title">Fable Nébuleuse <span>est enfin disponible</span></h2>
+            <div class="featured-carousel">
+                <article class="product-card">
+                    <img src="images/nouveaute1.webp" alt="Booster Fable Nébuleuse" width="200" height="280" loading="lazy">
+                    <div class="product-info">
+                        <h3 class="product-title">Booster Fable Nébuleuse</h3>
+                        <p class="product-price">5,99 €</p>
+                    </div>
+                    <a href="produit1.html" class="button">Voir l'offre</a>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/nouveaute2.webp" alt="Elite Trainer Box Fable Nébuleuse" width="200" height="280" loading="lazy">
+                    <div class="product-info">
+                        <h3 class="product-title">Elite Trainer Box</h3>
+                        <p class="product-price">59,99 €</p>
+                    </div>
+                    <a href="produit2.html" class="button">Voir l'offre</a>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/nouveaute3.webp" alt="Display Fable Nébuleuse" width="200" height="280" loading="lazy">
+                    <div class="product-info">
+                        <h3 class="product-title">Display 36 boosters</h3>
+                        <p class="product-price">189,99 €</p>
+                    </div>
+                    <a href="produit3.html" class="button">Voir l'offre</a>
+                </article>
+
+                <div class="carousel-controls">
+                    <button class="carousel-button prev" aria-label="Produit précédent">
+                        <svg width="24" height="24" aria-hidden="true">
+                            <use href="sprite.svg#arrow-left"></use>
+                        </svg>
+                    </button>
+                    <button class="carousel-button next" aria-label="Produit suivant">
+                        <svg width="24" height="24" aria-hidden="true">
+                            <use href="sprite.svg#arrow-right"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="popular-products">
+        <div class="container">
+            <h2 class="section-title">Articles populaires</h2>
+            <div class="products-grid">
+                <article class="product-card">
+                    <img src="images/populaire1.webp" alt="Carte Dracaufeu VMAX" width="200" height="280" loading="lazy">
+                    <div class="product-info">
+                        <h3 class="product-title">Dracaufeu VMAX</h3>
+                        <p class="product-price">20,00 €</p>
+                    </div>
+                    <a href="produit-pop1.html" class="button">Voir l'offre</a>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/populaire2.webp" alt="Display Pokémon GO" width="200" height="280" loading="lazy">
+                    <div class="product-info">
+                        <h3 class="product-title">Display Pokémon GO</h3>
+                        <p class="product-price">129,99 €</p>
+                    </div>
+                    <a href="produit-pop2.html" class="button">Voir l'offre</a>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/populaire3.webp" alt="Pikachu EX" width="200" height="280" loading="lazy">
+                    <div class="product-info">
+                        <h3 class="product-title">Pikachu EX</h3>
+                        <p class="product-price">15,00 €</p>
+                    </div>
+                    <a href="produit-pop3.html" class="button">Voir l'offre</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="news-events">
+        <div class="container">
+            <h2 class="section-title">Actualités</h2>
+            <div class="event-card">
+                <img src="images/japan-expo.webp" alt="Japan Expo" width="300" height="200" loading="lazy">
+                <article class="event-info">
+                    <h3>Japan Expo</h3>
+                    <p>30/10/2025 au 5/11/2025</p>
+                    <a href="japan-expo.html" class="button button-secondary">En savoir plus</a>
+                </article>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <section class="footer-top">
+            <div class="footer-col">
+                <h3>À propos</h3>
+                <p>Destocard est un site spécialisé dans la vente de cartes Pokémon, créé par un passionné pour les passionnés.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Liens utiles</h3>
+                <ul>
+                    <li><a href="mentions-legales.html">Mentions légales</a></li>
+                    <li><a href="cgv.html">CGV</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="https://instagram.com/destocard" aria-label="Instagram">
+                        <svg width="24" height="24" aria-hidden="true">
+                            <use href="sprite.svg#instagram"></use>
+                        </svg>
+                    </a>
+                    <a href="https://facebook.com/destocard" aria-label="Facebook">
+                        <svg width="24" height="24" aria-hidden="true">
+                            <use href="sprite.svg#facebook"></use>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/destocard" aria-label="Twitter">
+                        <svg width="24" height="24" aria-hidden="true">
+                            <use href="sprite.svg#twitter"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <nav class="mobile-navigation">
+        <a href="profil.html" class="nav-item" aria-label="Profil">
+            <svg width="24" height="24" aria-hidden="true">
+                <use href="sprite.svg#profile"></use>
+            </svg>
+        </a>
+        <a href="contact.html" class="nav-item" aria-label="Contact">
+            <svg width="24" height="24" aria-hidden="true">
+                <use href="sprite.svg#mail"></use>
+            </svg>
+        </a>
+        <a href="ajouter.html" class="nav-item" aria-label="Ajouter un produit">
+            <svg width="24" height="24" aria-hidden="true">
+                <use href="sprite.svg#add"></use>
+            </svg>
+        </a>
+        <button class="nav-item menu-button" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg width="24" height="24" aria-hidden="true">
+                <use href="sprite.svg#menu"></use>
+            </svg>
+        </button>
+    </nav>
+
+    <div id="mobile-menu" class="mobile-menu" hidden>
+        <!-- Contenu du menu mobile -->
+    </div>
+</footer>
+
+<!-- Ajout de balisage structuré Schema.org pour l'e-commerce -->
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Destocard",
+        "url": "https://www.destocard.fr/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.destocard.fr/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+</script>
+
+<!-- JavaScript -->
+<script src="js/main.js" defer></script>
+</body>
+</html>

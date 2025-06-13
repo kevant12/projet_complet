@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paiement - Votre Boutique</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Ton CSS unifié -->
+</head>
+<body>
+<header>
+    <h1>Votre Boutique - Paiement Sécurisé</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="products.html">Produits</a></li>
+            <li><a href="panier.html">Panier</a></li>
+            <!-- Pas de lien Connexion/Inscription ici, l'utilisateur est censé être connecté -->
+            <li><a href="compte.html">Mon Compte</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="container">
+        <section class="checkout-container">
+            <h2>Finaliser ma commande</h2>
+
+            <div class="checkout-grid"> <!-- Pour une mise en page en deux colonnes potentiellement -->
+                <div class="order-summary-section">
+                    <h3>Récapitulatif de la commande</h3>
+                    <ul class="order-items-list">
+                        <!-- Les items seront générés dynamiquement par JS ou backend -->
+                        <li class="order-item">
+                            <span class="item-name">Nom Produit 1 (x2)</span>
+                            <span class="item-price">59,98 €</span>
+                        </li>
+                        <li class="order-item">
+                            <span class="item-name">Nom Produit 2 (x1)</span>
+                            <span class="item-price">29,99 €</span>
+                        </li>
+                        <!-- ... autres produits ... -->
+                    </ul>
+                    <div class="order-total">
+                        <p>Sous-total : <span id="subtotal-price">89,97 €</span></p>
+                        <p>Livraison : <span id="shipping-price">5,00 €</span></p>
+                        <p class="total-price">Total à payer : <strong id="grand-total-price">94,97 €</strong></p>
+                    </div>
+                </div>
+
+                <div class="customer-info-section">
+                    <h3>Vos informations</h3>
+                    <form id="payment-form">
+                        <fieldset>
+                            <legend>Adresse de livraison</legend>
+                            <div class="form-group">
+                                <label for="shipping-name">Nom complet :</label>
+                                <input type="text" id="shipping-name" name="shipping_name" value="Jean Dupont (prérempli si connecté)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="shipping-address1">Adresse (ligne 1) :</label>
+                                <input type="text" id="shipping-address1" name="shipping_address1" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="shipping-city">Ville :</label>
+                                <input type="text" id="shipping-city" name="shipping_city" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="shipping-zip">Code Postal :</label>
+                                <input type="text" id="shipping-zip" name="shipping_zip" pattern="[0-9]{5}" title="Code postal à 5 chiffres" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="shipping-country">Pays :</label>
+                                <input type="text" id="shipping-country" name="shipping_country" value="France" required>
+                            </div>
+                        </fieldset>
+
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="same-as-shipping" name="same_as_shipping" checked>
+                                L'adresse de facturation est la même que l'adresse de livraison.
+                            </label>
+                        </div>
+
+                        <fieldset id="billing-address-fieldset" style="display:none;"> <!-- Caché si la case est cochée -->
+                            <legend>Adresse de facturation</legend>
+                            <!-- Champs similaires à l'adresse de livraison (shipping-name -> billing-name, etc.) -->
+                            <!-- Laisser vide pour l'instant, à remplir si besoin -->
+                            <p><em>Remplir si différente de l'adresse de livraison.</em></p>
+                        </fieldset>
+
+                        <div class="payment-delegation-notice">
+                            <p>
+                                Vous allez être redirigé vers notre partenaire de paiement sécurisé
+                                pour finaliser votre achat. Nous ne stockons aucune information
+                                bancaire sur notre site.
+                            </p>
+                            <!-- Ici, tu pourrais afficher les logos des moyens de paiement acceptés (Visa, MC, PayPal) -->
+                            <img src="images/payment_logos.png" alt="Moyens de paiement acceptés" style="max-width: 200px; margin-top:10px;">
+                        </div>
+
+                        <button type="submit" id="proceed-to-payment-btn" class="btn btn-primary btn-block">
+                            Confirmer et procéder au paiement sécurisé
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<footer>
+    <p>© 2023 Votre Boutique. Tous droits réservés.</p>
+</footer>
+
+
+</body>
+</html>
